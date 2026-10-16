@@ -249,7 +249,7 @@ Grading happens in this order:
    `report.md`.
 2. **`report.md` (10%):** it contains every item listed in [section 5](#5-what-to-submit), for
    each of your runs, plus the comparison.
-3. **Hidden tests (90%):** staff run your final specs as Approaches 1 and 3 against the hidden
+3. **Hidden tests (90%):** staff run your final specs as Approaches 1 and 3 with GPT 5.6 Luna against the hidden
    tests for components A and B. The hidden tests also still check the four milestone 0 boot
    conditions. The better of the two scores counts.
 
