@@ -1,6 +1,5 @@
 __pycache__/
 **/__pycache__/
-jobs/
 .env
 .venv/
 venv/
@@ -22,3 +21,6 @@ scripts/closed-internet-*-shard.yaml
 # Local temporary task worktree
 tasks/post-train-ifeval-tmp
 build/
+# Generated spec copies for slack-clone-course (moved from tasks/slack-clone-course/.gitignore)
+tasks/slack-clone-course/course-staff-files/final_task/environment/spec
+tasks/slack-clone-course/student-files/spec

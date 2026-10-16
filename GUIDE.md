@@ -70,7 +70,9 @@ You edit this folder (it starts empty):
 tasks/slack-clone-course/course-staff-files/final_task/environment/milestone-specs/milestone-1-specs/
 ```
 
-The run copies it into the agent's container as `/spec`. It holds:
+The run copies it into the agent's container as `/spec`. During a run this folder holds one
+layout, with `README.md` at its top level. At submission it holds `single-file/` and `staged/`
+(see [README section 3](README.md#3-running-the-agent)). During a run it holds:
 
 - **`README.md`**: the only file the agent is told to read. It must name every other file, and
   state the scope, the order of work, and when the agent may submit. A file your README does not

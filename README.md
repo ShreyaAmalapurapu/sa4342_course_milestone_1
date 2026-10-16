@@ -145,8 +145,17 @@ Try the approaches in [section 1](#1-layouts-and-approaches) in any order. For e
 
 1. Write the spec and checks following [`GUIDE.md`](GUIDE.md), covering the lines in
    [`COMPONENTS.md`](COMPONENTS.md).
-2. Put the spec and checks for that run in `milestone-1-specs/`. The folder should hold one layout at
-   a time, so keep a copy of each layout somewhere else.
+2. Put the spec and checks for that run directly in `milestone-1-specs/`
+   (`tasks/slack-clone-course/course-staff-files/final_task/environment/milestone-specs/milestone-1-specs/`),
+   with `README.md` at its top level. The run copies this folder into the agent's container as
+   `/spec`, so it holds one layout at a time:
+   1. Write the single-file layout directly in `milestone-1-specs/`.
+   2. Run. The agent sees it as `/spec/`.
+   3. When you are done with that layout, move it out of the folder, write the staged layout in
+      `milestone-1-specs/` the same way, and run.
+   4. Before submitting, put each finished layout in its own subfolder:
+      `milestone-1-specs/single-file/` and `milestone-1-specs/staged/` (see
+      [section 5](#5-what-to-submit)).
 3. Run the agent from `tasks/slack-clone-course/student-files`:
 
    ```bash
@@ -204,8 +213,11 @@ submit with failures still showing. Then change the spec.
 > - **Your final specs and checks, in `milestone-1-specs/`.** Once you are done running, put both
 >   layouts there, each in its own subfolder holding exactly what the agent got for that run
 >   (README, Spec A, Spec B and all checks):
->   - `milestone-1-specs/single-file/`: your Single-file spec (Approaches 1 and 2)
->   - `milestone-1-specs/staged/`: your Staged spec (Approaches 3 and 4)
+>   - `milestone-1-specs/single-file/`: your Single-file specs (Approaches 1 and 2)
+>   - `milestone-1-specs/staged/`: your Staged specs (Approaches 3 and 4)
+>
+>   During runs the layout sits loose in `milestone-1-specs/`, so move each one into its subfolder
+>   before you submit (step 2 in [section 3](#3-running-the-agent)).
 > - **The job folder of every run you did, for every approach:** each
 >   `tasks/slack-clone-course/jobs/<timestamp>/` folder. Each one holds the code the agent wrote
 >   (`artifacts/app/`, the run's `/app`), the transcript and `result.json`.
